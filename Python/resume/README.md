@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>方华 - 资深测试架构师 & 质量管理专家</title>
+    <style>
+        /* 全局样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", "微软雅黑", "PingFang SC", "苹方", "Helvetica Neue", Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            background: #fff;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        /* 头部样式 */
+        header {
+            background: linear-gradient(135deg, #1e5799 0%, #2989d8 50%, #207cca 100%);
+            padding: 40px;
+            color: white;
+            text-align: center;
+        }
+        
+        .name-title h1 {
+            font-size: 2.2em;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        
+        .name-title h2 {
+            font-size: 1.4em;
+            font-weight: 400;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        
+        .contact-item {
+            margin: 0 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        /* 内容区域 */
+        .content {
+            padding: 30px 40px;
+        }
+        
+        section {
+            margin-bottom: 30px;
+        }
+        
+        .section-title {
+            color: #1e5799;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #1e5799;
+            position: relative;
+        }
+        
+        /* 技能样式 */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .skill-item {
+            background-color: #e8f4fc;
+            border-radius: 5px;
+            padding: 12px 20px;
+            flex: 1;
+            min-width: 300px;
+            border-left: 4px solid #1e5799;
+        }
+        
+        .skill-item strong {
+            color: #1e5799;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        /* 成就样式 */
+        .achievements-list {
+            margin-left: 20px;
+        }
+        
+        .achievement-item {
+            margin-bottom: 20px;
+        }
+        
+        .achievement-title {
+            color: #1e5799;
+            font-weight: 600;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+        }
+        
+        .achievement-details {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+        
+        .achievement-details li {
+            margin-bottom: 5px;
+        }
+        
+        /* 工作经历 */
+        .experience-item {
+            margin-bottom: 25px;
+        }
+        
+        .company-title {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+        
+        .company-name {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #1e5799;
+        }
+        
+        .work-period {
+            color: #666;
+        }
+        
+        .job-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
+        
+        .job-responsibilities {
+            list-style-type: circle;
+            padding-left: 20px;
+        }
+        
+        .job-responsibilities li {
+            margin-bottom: 5px;
+        }
+        
+        /* 项目经验 */
+        .project {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #f8f9fb;
+            border-radius: 5px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        
+        .project-title {
+            font-weight: 600;
+            color: #1e5799;
+            font-size: 1.1em;
+        }
+        
+        .project-role {
+            font-weight: 600;
+        }
+        
+        .project-tech {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+        
+        .project-description {
+            margin-top: 10px;
+        }
+        
+        .project-details {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+        
+        .project-details li {
+            margin-bottom: 5px;
+        }
+        
+        /* 教育与证书 */
+        .education, .certificates {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .education-item, .certificate-item {
+            background-color: #e8f4fc;
+            border-radius: 5px;
+            padding: 15px;
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        /* 开源项目 */
+        .open-source {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .open-source-item {
+            flex: 1;
+            min-width: 300px;
+            background-color: #f8f9fb;
+            border-radius: 5px;
+            padding: 15px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .open-source-title {
+            color: #1e5799;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .open-source-title a {
+            color: #1e5799;
+            text-decoration: none;
+        }
+        
+        .open-source-title a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="name-title">
+                <h1>方华</h1>
+                <h2>资深测试架构师 & 质量管理专家</h2>
+            </div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span>男 | 37岁</span>
+                </div>
+                <div class="contact-item">
+                    <span>电话：13524183387</span>
+                </div>
+                <div class="contact-item">
+                    <span>邮箱：fanghua355@126.com</span>
+                </div>
+            </div>
+        </header>
+        
+        <div class="content">
+            <section>
+                <h2 class="section-title">个人概述</h2>
+                <p>热衷于构建高质量的测试体系，擅长将技术创新应用于测试领域。十余年测试行业经验，涵盖金融、互联网等多个领域，专注于自动化测试架构设计和质量流程优化。热爱技术分享与团队建设，善于在保障产品质量的同时提升团队效能。</p>
+            </section>
+            
+            <section>
+                <h2 class="section-title">核心专业技能</h2>
+                <div class="skills">
+                    <div class="skill-item">
+                        <strong>自动化测试架构</strong>
+                        <span>精通Java/Python测试框架设计，构建分布式自动化测试平台</span>
+                    </div>
+                    <div class="skill-item">
+                        <strong>测试左移实践</strong>
+                        <span>深度实践契约测试、单元测试等前置测试方法，大幅提升质量和效率</span>
+                    </div>
+                    <div class="skill-item">
+                        <strong>测试工具开发</strong>
+                        <span>自主研发多款测试工具，专注解决实际测试痛点</span>
+                    </div>
+                    <div class="skill-item">
+                        <strong>全链路质量管控</strong>
+                        <span>从需求到上线全流程质量把控，构建完善的质量管理体系</span>
+                    </div>
+                    <div class="skill-item">
+                        <strong>微服务测试</strong>
+                        <span>丰富的微服务架构测试经验，熟悉Spring Cloud生态下的测试策略</span>
+                    </div>
+                    <div class="skill-item">
+                        <strong>团队管理</strong>
+                        <span>带领20人以上测试团队，建立标准化测试流程和技术梯队</span>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <h2 class="section-title">个人亮点成就</h2>
+                <div class="achievements-list">
+                    <div class="achievement-item">
+                        <div class="achievement-title">测试效能提升</div>
+                        <ul class="achievement-details">
+                            <li>开发智能化测试平台，通过Java反射机制设计自动化断言库，接口测试维护成本降低60%</li>
+                            <li>基于TestNG+Selenium打造一体化UI/接口自动化平台，团队测试效率提升40%</li>
+                            <li>主导银行零售中心自动化测试标准化建设，覆盖6个部门的统一测试规范</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="achievement-item">
+                        <div class="achievement-title">创新测试实践</div>
+                        <ul class="achievement-details">
+                            <li>在微服务体系中推行契约测试，接口自动化覆盖率从30%提升至75%，测试周期缩短60%</li>
+                            <li>研发Python智能测试数据生成工具，已在5个核心系统中成功应用</li>
+                            <li>通过图像识别技术优化UI自动化测试，节省项目周期内2人/日工作量</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="achievement-item">
+                        <div class="achievement-title">质量驱动业务</div>
+                        <ul class="achievement-details">
+                            <li>主导新微贷项目质量建设，助力产品发放金额突破百亿，获银行优秀创新项目奖</li>
+                            <li>负责核心交易系统测试架构升级，Bug率下降35%，系统稳定性显著提升</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <h2 class="section-title">工作经历</h2>
+                <div class="experience-item">
+                    <div class="company-title">
+                        <span class="company-name">平安银行股份有限公司</span>
+                        <span class="work-period">2019.03-2024.10</span>
+                    </div>
+                    <div class="job-title">测试经理</div>
+                    <ul class="job-responsibilities">
+                        <li>负责消费金融部门的渠道测试与质量管理，从需求评审到上线验证的全流程把控</li>
+                        <li>主导自动化测试平台ATS的开发维护，赋能测试团队和开发、产品部门的效能提升</li>
+                        <li>设计实施零售中心自动化测试标准，制定并推行覆盖6个部门的自动化白皮书1.0</li>
+                        <li>推动测试团队技术创新，引入AI编码助手等工具提升团队技术能力</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="company-title">
+                        <span class="company-name">上海厚本金融信息服务有限公司</span>
+                        <span class="work-period">2016.09-2019.03</span>
+                    </div>
+                    <div class="job-title">测试工程师</div>
+                    <ul class="job-responsibilities">
+                        <li>参与公司战略项目"信审重构"，负责微服务拆分的测试规划与实施</li>
+                        <li>主导资产平台销售、审批系统的测试与小组管理工作，建立有效的测试流程</li>
+                        <li>参与资产研发质量管理平台(HBTC)的设计与前端开发，规范研发质量流程</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="company-title">
+                        <span class="company-name">上海至臻文化传媒股份有限公司</span>
+                        <span class="work-period">2016.02-2016.09</span>
+                    </div>
+                    <div class="job-title">测试主管</div>
+                    <ul class="job-responsibilities">
+                        <li>负责APP及WEB产品的测试流程建设，包括环境搭建、用例设计与执行</li>
+                        <li>基于Java+Maven+TestNG搭建接口自动化框架，提升测试效率</li>
+                        <li>运用Jmeter进行性能测试，保障系统稳定性</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="company-title">
+                        <span class="company-name">上海兆马电子商务有限公司</span>
+                        <span class="work-period">2015.06-2015.12</span>
+                    </div>
+                    <div class="job-title">高级测试工程师</div>
+                    <ul class="job-responsibilities">
+                        <li>负责购车平台ERP系统及APP的全面质量保障</li>
+                        <li>进行功能与性能测试，开发测试数据自动化生成工具</li>
+                        <li>协调产品与开发团队，优化需求实现过程</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="company-title">
+                        <span class="company-name">苏州科达科技股份有限公司</span>
+                        <span class="work-period">2013.04-2015.05</span>
+                    </div>
+                    <div class="job-title">测试工程师</div>
+                    <ul class="job-responsibilities">
+                        <li>主导终端产品测试，包括功能测试、性能测试与压力测试</li>
+                        <li>建立完善的Bug跟踪与解决流程，确保产品质量</li>
+                        <li>参与客户现场支持，提供技术解决方案</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="company-title">
+                        <span class="company-name">上海智臻网络科技有限公司</span>
+                        <span class="work-period">2011.10-2013.03</span>
+                    </div>
+                    <div class="job-title">测试工程师</div>
+                    <ul class="job-responsibilities">
+                        <li>负责智能机器人ERP后台与交互平台的功能测试</li>
+                        <li>参与产品迭代质量保障工作</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section>
+                <h2 class="section-title">精选项目经验</h2>
+                <div class="project">
+                    <div class="project-header">
+                        <span class="project-title">核心交易系统自动化测试平台</span>
+                        <span class="project-period">2022.08-2023.03</span>
+                    </div>
+                    <div class="project-role">架构设计者</div>
+                    <div class="project-tech">技术栈：Java, Spring Boot, TestNG, Selenium, Python, OpenCV</div>
+                    <div class="project-description">
+                        <strong>成果：</strong>
+                        <ul class="project-details">
+                            <li>设计分布式测试框架，集成Spring Boot与TestNG，执行效率提升40%</li>
+                            <li>开发订单匹配算法测试方案，覆盖20+异常场景，系统Bug率降低35%</li>
+                            <li>引入JVM调优技术，优化内存管理，减少30% Full GC频率</li>
+                            <li>创新应用OpenCV图像识别技术，实现UI自动化截图智能对比，提升测试准确率</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="project">
+                    <div class="project-header">
+                        <span class="project-title">新微贷产品质量体系建设</span>
+                        <span class="project-period">2020.05-2022.12</span>
+                    </div>
+                    <div class="project-role">质量负责人</div>
+                    <div class="project-tech">背景：银行战略级小微金融产品线转型</div>
+                    <div class="project-description">
+                        <strong>贡献：</strong>
+                        <ul class="project-details">
+                            <li>构建端到端测试流程，覆盖从渠道进件到贷后服务的完整链路</li>
+                            <li>应用契约测试与API自动化测试，确保系统间调用稳定性</li>
+                            <li>建立质量监控指标体系，实现问题早发现早解决</li>
+                        </ul>
+                        <strong>成果：</strong>产品发放金额突破百亿，获评银行优秀创新项目
+                    </div>
+                </div>
+                
+                <div class="project">
+                    <div class="project-header">
+                        <span class="project-title">资产研发质量管理平台</span>
+                        <span class="project-period">2018.05-2018.08</span>
+                    </div>
+                    <div class="project-role">技术负责人</div>
+                    <div class="project-tech">技术栈：Vue, Django, Python</div>
+                    <div class="project-description">
+                        <strong>内容：</strong>
+                        <ul class="project-details">
+                            <li>设计并实现测试-开发-运维一体化管理平台</li>
+                            <li>规范研发流程，提供可视化质量监控</li>
+                            <li>实现上线流程自动化，减少人工干预</li>
+                        </ul>
+                        <strong>价值：</strong>显著提升团队研发效率，建立可度量的质量管理体系
+                    </div>
+                </div>
+                
+                <div class="project">
+                    <div class="project-header">
+                        <span class="project-title">信审系统微服务重构</span>
+                        <span class="project-period">2017.10-2018.04</span>
+                    </div>
+                    <div class="project-role">测试架构师</div>
+                    <div class="project-tech">挑战：传统单体应用向微服务架构转型</div>
+                    <div class="project-description">
+                        <strong>实现：</strong>
+                        <ul class="project-details">
+                            <li>设计微服务测试策略，包括单元测试、契约测试、集成测试与端到端测试</li>
+                            <li>引入服务虚拟化技术，解决测试环境依赖问题</li>
+                            <li>建立自动化测试流水线，支持持续集成与部署</li>
+                        </ul>
+                        <strong>成果：</strong>系统解耦成功，业务响应能力显著提升
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <h2 class="section-title">教育背景</h2>
+                <div class="education">
+                    <div class="education-item">
+                        <div><strong>蚌埠学院</strong></div>
+                        <div>本科 | 计算机科学与技术 | 2007-2011</div>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <h2 class="section-title">资格证书</h2>
+                <div class="certificates">
+                    <div class="certificate-item">大学英语四级</div>
+                    <div class="certificate-item">驾驶证C1</div>
+                </div>
+            </section>
+            
+            <section>
+                <h2 class="section-title">开源项目</h2>
+                <div class="open-source">
+                    <div class="open-source-item">
+                        <div class="open-source-title">
+                            <a href="https://github.com/fanghua355/json-compare" target="_blank">接口自动化断言库</a>
+                        </div>
+                        <div class="open-source-description">
+                            基于Java反射机制的智能化接口断言工具
+                        </div>
+                    </div>
+                    <div class="open-source-item">
+                        <div class="open-source-title">
+                            <a href="https://github.com/fanghua355/image-compare" target="_blank">图像对比工具</a>
+                        </div>
+                        <div class="open-source-description">
+                            应用于UI自动化测试的图像智能对比库
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
